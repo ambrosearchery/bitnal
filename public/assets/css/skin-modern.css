@@ -1,0 +1,48 @@
+/* ====================== MODERN DARK SKIN ====================== */
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.page-header {
+    background: #1e2937;
+    color: #bae6fd;
+    border-bottom: 3px solid #60a5fa;
+}
+
+.slot {
+    background: #1e2937;
+    border: 2px solid #475569;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slot:hover {
+    border-color: #60a5fa;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(96, 165, 250, 0.2);
+}
+
+.slot.available { border-left: 6px solid #4ade80; }
+.slot.partial   { border-left: 6px solid #facc15; }
+.slot.blocked   { background: #334155; border-color: #f87171; opacity: 0.85; }
+
+.book-button {
+    background: #3b82f6;
+    color: white;
+    font-weight: 600;
+    padding: 0.85rem 1.75rem;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.book-button:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+}
+
+.current-date {
+    font-size: 1.35rem;
+    font-weight: 500;
+}

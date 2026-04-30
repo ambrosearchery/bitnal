@@ -1,0 +1,35 @@
+* { box-sizing: border-box; margin:0; padding:0; }
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Layout */
+.header, .page-header, .footer { padding: 1rem; text-align: center; }
+.hero { padding: 4rem 1rem; text-align: center; background: #f8f1e3; }
+
+.slot {
+    padding: 1.25rem;
+    margin: 0.75rem 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+
+.slot:hover { transform: translateY(-2px); }
+
+.book-button {
+    margin-top: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: #2c5f2d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-nav { padding: 0.5rem 1rem; }
+
+/* You can expand this base file later */

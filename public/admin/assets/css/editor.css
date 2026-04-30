@@ -1,0 +1,181 @@
+/* =============================================
+   Bitnal Editor Styles (Admin Only)
+   ============================================= */
+
+.editor {
+    display: flex;
+    height: 100vh;
+    font-family: system-ui, sans-serif;
+}
+
+.sidebar {
+    width: 280px;
+    background: #f8f1e3;
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 2px solid #d4b89f;
+}
+
+.preview {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: #fff;
+}
+
+.preview-title {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c1f14;
+}
+
+/* Block options in sidebar */
+.block-option {
+    padding: 12px 16px;
+    margin: 6px 0;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.block-option:hover {
+    border-color: #8b5a2b;
+    background: #fff9f0;
+}
+
+/* Content blocks in preview */
+.content-block {
+    position: relative;
+    padding: 20px;
+    margin: 16px 0;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.content-block:hover {
+    border-color: #8b5a2b;
+}
+
+.block-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.content-block:hover .block-controls {
+    opacity: 1;
+}
+
+.save-button {
+    width: 100%;
+    padding: 14px;
+    background: #8b5a2b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    background: #a16d3f;
+}
+
+/* Block Controls */
+.block-controls {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    display: flex;
+    gap: 4px;
+}
+
+.content-block:hover .block-controls {
+    opacity: 1;
+}
+
+.control-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #8b5a2b;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.control-btn.delete {
+    background: #c44;
+}
+
+.control-btn:hover {
+    background: #a16d3f;
+}
+
+.control-btn.delete:hover {
+    background: #a33;
+}
+
+/* Placeholder text when blocks are empty */
+.block-title:empty::before,
+.block-heading:empty::before,
+.block-paragraph:empty::before,
+.block-lead:empty::before,
+.block-callout p:empty::before,
+.block-quote p:empty::before,
+.block-button:empty::before,
+.block-bullets li:empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    font-style: italic;
+    pointer-events: none;
+}
+
+/* Individual placeholders */
+.block-title:empty::before     { content: "Page Title"; }
+.block-heading:empty::before   { content: "Section Heading"; }
+.block-lead:empty::before      { content: "Lead paragraph..."; }
+.block-paragraph:empty::before { content: "Start typing your paragraph..."; }
+.block-callout p:empty::before { content: "Callout text..."; }
+.block-quote p:empty::before   { content: "Quote text..."; }
+.block-button:empty::before    { content: "Button text"; }
+.block-bullets li:empty::before{ content: "List item..."; }
+
+/* Make editable blocks behave nicely */
+.content-block > [contenteditable="true"] {
+    outline: none;
+    display: block;
+    width: 100%;
+    min-height: 1.2em;
+}
+
+/* Bullets in editor */
+.block-bullets {
+    list-style-type: disc;
+    padding-left: 35px;
+    margin: 16px 0;
+}
+
+.block-bullets li {
+    display: list-item;
+    min-height: 1.4em;
+    padding: 3px 0;
+}
+
+.block-bullets li:empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    font-style: italic;
+    pointer-events: none;
+}
+
+.block-bullets li[contenteditable="true"] {
+    outline: none;
+}
